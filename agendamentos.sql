@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `agendamentos`
 --
-CREATE DATABASE IF NOT EXISTS analise;
+CREATE DATABASE IF NOT EXISTS projetoweb;
 CREATE TABLE IF NOT EXISTS `agendamentos` (
   `id` int(2) NOT NULL AUTO_INCREMENT,
   `nome` varchar(40) NOT NULL,

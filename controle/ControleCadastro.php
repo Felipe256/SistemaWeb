@@ -23,7 +23,7 @@ class cadastroController{
 		$this->cadastro->setObservacao($_POST['txtObservacao']);
 		$result = $this->cadastro->incluir();
 		if($result == 1){
-			echo "<script>alert('Registro incluido com sucesso!');document.location='../index.html'</script>";
+			echo "<script>alert('Registro incluido com sucesso!');document.location='../index.php'</script>";
 		}else{
 			echo "<script>alert('Erro ao gravar registro!');</script>";
 		}
@@ -47,6 +47,15 @@ class cadastroController{
             echo "<script>alert('Erro ao alterar o registro!');</script>";
         }
     }
+	
+	public function excluir($id){
+		$result = $this->cadastro->excluir($id);
+		if($result >= 1){
+            echo "<script>alert('Registro alterado com sucesso!');document.location='consultarClientes.php'</script>";
+        }else{
+            echo "<script>alert('Erro ao alterar o registro!');</script>";
+        }
+	}
 }
 new cadastroController();
 ?>
